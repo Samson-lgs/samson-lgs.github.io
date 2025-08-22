@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta chars                    <p class="hero-subtitle">3rd year CSE-AIML student passionate about AI, machine learning, and building intelligent solutions</p>t="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Samson Jose J - CSE-AIML Student</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <link rel="stylesheet" href="css/ai-theme.css">
 </head>
 <body>
-    <!-- Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
+    <!-- AI Background Effects -->
+    <div class="neural-bg" id="neuralBg"></div>
+    <div class="matrix-rain" id="matrixRain"></div>
+    
     <!-- Navigation -->
     <nav class="nav">
         <div class="nav-container">
@@ -56,7 +58,7 @@
                     <span class="title-line">CSE-AIML Student</span>
                     <span class="title-line">& Developer</span>
                 </h1>
-                <p class="hero-subtitle">2nd year CSE-AIML student passionate about AI, machine learning, and building intelligent solutions</p>
+                <p class="hero-subtitle">3rd year CSE-AIML student passionate about AI, machine learning, and building intelligent solutions</p>
                 <div class="hero-cta">
                     <a href="#work" class="btn btn-primary">
                         <span>View My Projects</span>
@@ -88,7 +90,7 @@
                             <span class="code-keyword">const</span>
                             <span class="code-variable"> year</span>
                             <span class="code-operator"> = </span>
-                            <span class="code-string">"2nd"</span>
+                            <span class="code-string">"3rd"</span>
                         </div>
                         <div class="code-line">
                             <span class="code-keyword">const</span>
@@ -129,7 +131,7 @@
             </div>
             <div class="about-content">
                 <div class="about-text">
-                    <p class="about-intro">Hi! I'm Samson Jose J, a 2nd year CSE-AIML student with a passion for artificial intelligence and machine learning.</p>
+                    <p class="about-intro">Hi! I'm Samson Jose J, a 3rd year CSE-AIML student with a passion for artificial intelligence and machine learning.</p>
                     <p>Currently pursuing my Bachelor's degree in Computer Science Engineering with specialization in AI & ML, I'm focused on learning cutting-edge AI technologies and applying them to solve real-world problems. I enjoy working with neural networks, data science, and building intelligent systems.</p>
                     <p>When I'm not studying or coding, you'll find me exploring new ML frameworks, participating in AI competitions, contributing to open source ML projects, or working on personal AI projects that challenge my understanding of machine learning.</p>
                     
@@ -165,15 +167,15 @@
                 </div>
                 <div class="about-stats">
                     <div class="stat-card">
-                        <div class="stat-number" data-target="15">0</div>
+                        <div class="stat-number" data-target="2">0</div>
                         <div class="stat-label">Projects Completed</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number" data-target="2">0</div>
+                        <div class="stat-number" data-target="3">0</div>
                         <div class="stat-label">Year of Study</div>
                     </div>
                     <div class="stat-card">
-                        <div class="stat-number" data-target="8">0</div>
+                        <div class="stat-number" data-target="6">0</div>
                         <div class="stat-label">Courses Completed</div>
                     </div>
                 </div>
@@ -194,11 +196,11 @@
                         <img src="images/images.jpeg" alt="Malware Detection System" class="project-img">
                         <div class="project-overlay">
                             <div class="project-links">
-                                <a href="#" class="project-link">
-                                    <i class="fab fa-github"></i>
+                                <a href="https://malware-detection-8qvzmlhfotdwguscgzr3e5.streamlit.app/" class="project-link live-demo" target="_blank" title="Launch Live Demo">
+                                    <i class="fas fa-play"></i>
                                 </a>
-                                <a href="#" class="project-link">
-                                    <i class="fas fa-external-link-alt"></i>
+                                <a href="#" class="project-link" target="_blank" title="View Source Code">
+                                    <i class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
@@ -213,9 +215,9 @@
                             <span>Pandas</span>
                         </div>
                         <div class="project-status">
-                            <span class="status-badge working">
-                                <i class="fas fa-code"></i>
-                                Currently Working
+                            <span class="status-badge completed">
+                                <i class="fas fa-check-circle"></i>
+                                Completed
                             </span>
                         </div>
                     </div>
@@ -272,7 +274,7 @@
                     </div>
                     <div class="edu-info">
                         <h3>Bachelor of Computer Science Engineering (AI & ML)</h3>
-                        <p class="edu-institution">ATME College Of Engineering</p>
+                        <p class="edu-institution">ATME College Of Engineering, Visvesvaraya Technological University</p>
                         <p class="edu-duration">2023 - 2027 (Expected)</p>
                         <p class="edu-gpa">Current CGPA: 8.9/10.0</p>
                         <div class="edu-courses">
@@ -296,37 +298,57 @@
                         <div class="certificate-item">
                             <div class="certificate-header">
                                 <div class="certificate-icon">
-                                    <i class="fab fa-google"></i>
+                                    <i class="fas fa-lightbulb"></i>
                                 </div>
                                 <div class="certificate-info">
-                                    <h4>Google AI Fundamentals</h4>
-                                    <span class="certificate-issuer">Google Cloud</span>
-                                    <span class="certificate-date">2024</span>
+                                    <h4>Creative Thinking and Innovation</h4>
+                                    <span class="certificate-issuer">Coursera</span>
+                                    <span class="certificate-date">2023</span>
                                 </div>
                             </div>
-                            <p class="certificate-description">Completed comprehensive course on AI fundamentals and machine learning basics</p>
+                            <p class="certificate-description">Mastered techniques for creative problem-solving and innovative thinking</p>
                             <div class="certificate-actions">
-                                <a href="#" class="certificate-link" target="_blank">
+                                <a href="creative thinking.pdf" class="certificate-link" target="_blank">
                                     <i class="fas fa-external-link-alt"></i>
                                     View Certificate
                                 </a>
                             </div>
                         </div>
-                        
+
+                        <div class="certificate-item">
+                            <div class="certificate-header">
+                                <div class="certificate-icon">
+                                    <i class="fas fa-pencil-ruler"></i>
+                                </div>
+                                <div class="certificate-info">
+                                    <h4>Design Thinking for Innovation</h4>
+                                    <span class="certificate-issuer">Coursera</span>
+                                    <span class="certificate-date">2023</span>
+                                </div>
+                            </div>
+                            <p class="certificate-description">Learned design thinking methodology for innovative problem-solving</p>
+                            <div class="certificate-actions">
+                                <a href="design thinking.pdf" class="certificate-link" target="_blank">
+                                    <i class="fas fa-external-link-alt"></i>
+                                    View Certificate
+                                </a>
+                            </div>
+                        </div>
+
                         <div class="certificate-item">
                             <div class="certificate-header">
                                 <div class="certificate-icon">
                                     <i class="fab fa-python"></i>
                                 </div>
                                 <div class="certificate-info">
-                                    <h4>Python for Data Science</h4>
-                                    <span class="certificate-issuer">Coursera</span>
-                                    <span class="certificate-date">2024</span>
+                                    <h4>Programming in Python</h4>
+                                    <span class="certificate-issuer">NPTEL</span>
+                                    <span class="certificate-date">2025</span>
                                 </div>
                             </div>
-                            <p class="certificate-description">Mastered Python programming for data analysis and machine learning applications</p>
+                            <p class="certificate-description">Comprehensive Python programming course covering core concepts and advanced topics</p>
                             <div class="certificate-actions">
-                                <a href="#" class="certificate-link" target="_blank">
+                                <a href="python.pdf" class="certificate-link" target="_blank">
                                     <i class="fas fa-external-link-alt"></i>
                                     View Certificate
                                 </a>
@@ -336,17 +358,17 @@
                         <div class="certificate-item">
                             <div class="certificate-header">
                                 <div class="certificate-icon">
-                                    <i class="fas fa-brain"></i>
+                                    <i class="fas fa-chart-bar"></i>
                                 </div>
                                 <div class="certificate-info">
-                                    <h4>Machine Learning Basics</h4>
-                                    <span class="certificate-issuer">edX</span>
-                                    <span class="certificate-date">2023</span>
+                                    <h4>Python for Data Science</h4>
+                                    <span class="certificate-issuer">Infosys Springboard</span>
+                                    <span class="certificate-date">2024</span>
                                 </div>
                             </div>
-                            <p class="certificate-description">Learned supervised and unsupervised learning algorithms and practical implementations</p>
+                            <p class="certificate-description">Advanced course on data science applications using Python, including data analysis and visualization</p>
                             <div class="certificate-actions">
-                                <a href="#" class="certificate-link" target="_blank">
+                                <a href="python for ds.pdf" class="certificate-link" target="_blank">
                                     <i class="fas fa-external-link-alt"></i>
                                     View Certificate
                                 </a>
@@ -359,14 +381,14 @@
                                     <i class="fas fa-database"></i>
                                 </div>
                                 <div class="certificate-info">
-                                    <h4>Data Structures & Algorithms</h4>
-                                    <span class="certificate-issuer">HackerRank</span>
-                                    <span class="certificate-date">2023</span>
+                                    <h4>Introduction to Oracle SQL</h4>
+                                    <span class="certificate-issuer">Infosys Springboard</span>
+                                    <span class="certificate-date">2024</span>
                                 </div>
                             </div>
-                            <p class="certificate-description">Achieved proficiency in DSA concepts with practical problem-solving skills</p>
+                            <p class="certificate-description">Comprehensive course on database management and SQL fundamentals using Oracle</p>
                             <div class="certificate-actions">
-                                <a href="#" class="certificate-link" target="_blank">
+                                <a href="SQL.pdf" class="certificate-link" target="_blank">
                                     <i class="fas fa-external-link-alt"></i>
                                     View Certificate
                                 </a>
@@ -376,37 +398,17 @@
                         <div class="certificate-item">
                             <div class="certificate-header">
                                 <div class="certificate-icon">
-                                    <i class="fab fa-js-square"></i>
+                                    <i class="fab fa-java"></i>
                                 </div>
                                 <div class="certificate-info">
-                                    <h4>JavaScript Fundamentals</h4>
-                                    <span class="certificate-issuer">freeCodeCamp</span>
-                                    <span class="certificate-date">2024</span>
+                                    <h4>Java Programming Fundamentals</h4>
+                                    <span class="certificate-issuer">Infosys Springboard</span>
+                                    <span class="certificate-date">2025</span>
                                 </div>
                             </div>
-                            <p class="certificate-description">Completed full JavaScript course covering ES6+, DOM manipulation, and async programming</p>
+                            <p class="certificate-description">Core concepts of Java programming language and object-oriented programming</p>
                             <div class="certificate-actions">
-                                <a href="#" class="certificate-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i>
-                                    View Certificate
-                                </a>
-                            </div>
-                        </div>
-                        
-                        <div class="certificate-item">
-                            <div class="certificate-header">
-                                <div class="certificate-icon">
-                                    <i class="fab fa-aws"></i>
-                                </div>
-                                <div class="certificate-info">
-                                    <h4>AWS Cloud Practitioner</h4>
-                                    <span class="certificate-issuer">Amazon Web Services</span>
-                                    <span class="certificate-date">2024</span>
-                                </div>
-                            </div>
-                            <p class="certificate-description">Gained foundational knowledge of AWS cloud services and architecture</p>
-                            <div class="certificate-actions">
-                                <a href="#" class="certificate-link" target="_blank">
+                                <a href="java.pdf" class="certificate-link" target="_blank">
                                     <i class="fas fa-external-link-alt"></i>
                                     View Certificate
                                 </a>
@@ -446,7 +448,7 @@
                             </div>
                             <div class="method-info">
                                 <h4>University</h4>
-                                <span>CSE-AIML Major</span>
+                                <span>Visvesvaraya Technological University</span>
                             </div>
                         </div>
                         <div class="contact-method">
@@ -461,41 +463,57 @@
                     </div>
 
                     <div class="social-links">
-                        <a href="#" class="social-link">
+                        <a href="https://github.com/Samson-lgs" class="social-link" target="_blank">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="https://www.linkedin.com/in/samson-jose-j-9966282a1" class="social-link" target="_blank">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-dribbble"></i>
+                        <a href="https://x.com/SanjayS85522176" class="social-link x-link" target="_blank">
+                            X
                         </a>
                     </div>
                 </div>
 
-                <form class="contact-form">
+                <form class="contact-form" id="contactForm" onsubmit="return sendEmail(event)">
                     <div class="form-row">
                         <div class="form-group">
-                            <input type="text" name="name" placeholder="Your Name" required>
+                            <input type="text" name="name" id="name" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" name="email" placeholder="Your Email" required>
+                            <input type="email" name="email" id="email" placeholder="Your Email" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject" required>
+                        <input type="text" name="subject" id="subject" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
-                        <textarea name="message" placeholder="Tell me about AI/ML collaboration opportunities, research projects, or study groups..." rows="6" required></textarea>
+                        <textarea name="message" id="message" placeholder="Tell me about AI/ML collaboration opportunities, research projects, or study groups..." rows="6" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">
                         <span>Send Message</span>
                         <i class="fas fa-paper-plane"></i>
                     </button>
                 </form>
+                <script>
+                    function sendEmail(event) {
+                        event.preventDefault();
+                        
+                        const name = document.getElementById('name').value;
+                        const email = document.getElementById('email').value;
+                        const subject = document.getElementById('subject').value;
+                        const message = document.getElementById('message').value;
+                        
+                        const mailtoLink = `mailto:sanjaysamson0522@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`)}`;
+                        
+                        window.location.href = mailtoLink;
+                        
+                        // Reset form after sending
+                        document.getElementById('contactForm').reset();
+                        
+                        return false;
+                    }
+                </script>
             </div>
         </div>
     </section>
@@ -515,5 +533,27 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        // Animate skill progress bars when they come into view
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const progressBars = entry.target.querySelectorAll('.progress-bar');
+                    progressBars.forEach(bar => {
+                        const width = bar.style.width;
+                        bar.style.width = '0%';
+                        setTimeout(() => {
+                            bar.style.width = width;
+                        }, 100);
+                    });
+                }
+            });
+        }, { threshold: 0.5 });
+
+        // Observe the skill cards
+        document.querySelectorAll('.skill-card').forEach(card => {
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,169 @@
+:root {
+    --ai-primary: #00f2fe;
+    --ai-secondary: #4facfe;
+    --ai-accent: #7367f0;
+    --ai-glow: rgba(0, 242, 254, 0.3);
+    --ai-dark: #0a1929;
+    --ai-darker: #060d18;
+    --ai-light: #e6f8fe;
+    --neural-gradient: linear-gradient(135deg, var(--ai-primary), var(--ai-secondary));
+    --matrix-bg: var(--ai-darker);
+}
+
+/* Neural Network Animation Background */
+.neural-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: var(--ai-darker);
+    overflow: hidden;
+}
+
+.neural-node {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: var(--ai-primary);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+}
+
+.neural-line {
+    position: absolute;
+    height: 1px;
+    background: var(--neural-gradient);
+    opacity: 0.2;
+    animation: fadeInOut 3s infinite;
+}
+
+/* Matrix Rain Effect */
+.matrix-rain {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.matrix-column {
+    position: absolute;
+    top: -100%;
+    width: 20px;
+    color: var(--ai-primary);
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 20px;
+    animation: matrixRain linear infinite;
+}
+
+/* Modern Card Styles */
+.ai-card {
+    background: rgba(10, 25, 41, 0.8);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(0, 242, 254, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 32px rgba(0, 242, 254, 0.1);
+    transition: all 0.3s ease;
+}
+
+.ai-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--ai-primary);
+    box-shadow: 0 12px 40px var(--ai-glow);
+}
+
+/* Neural Network Grid */
+.neural-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    position: relative;
+}
+
+/* AI-themed Text Effects */
+.ai-text {
+    background: var(--neural-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+}
+
+.ai-glow {
+    text-shadow: 0 0 10px var(--ai-glow);
+}
+
+/* Data Flow Animation */
+.data-flow {
+    position: relative;
+    overflow: hidden;
+}
+
+.data-particle {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background: var(--ai-primary);
+    opacity: 0.5;
+    animation: dataFlow 2s linear infinite;
+}
+
+/* Neural Connections */
+.neural-connection {
+    position: relative;
+}
+
+.neural-connection::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: var(--neural-gradient);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.neural-connection:hover::before {
+    transform: scaleX(1);
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 0.5; }
+    50% { transform: scale(1.5); opacity: 1; }
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 0.3; }
+}
+
+@keyframes matrixRain {
+    0% { transform: translateY(-100%); }
+    100% { transform: translateY(1000%); }
+}
+
+@keyframes dataFlow {
+    0% { transform: translateY(-100%) translateX(-100%); }
+    100% { transform: translateY(100%) translateX(100%); }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .neural-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .ai-card {
+        padding: 1.5rem;
+    }
+}

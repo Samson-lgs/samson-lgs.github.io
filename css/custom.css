@@ -1,0 +1,203 @@
+/* Hero Visual Section */
+.hero-visual {
+    position: relative;
+    padding: 2rem;
+}
+
+.skill-cards {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.skill-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 16px;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border-color: var(--primary-color);
+}
+
+.skill-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    color: white;
+}
+
+.skill-info {
+    flex: 1;
+}
+
+.skill-info h3 {
+    margin-bottom: 0.5rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.skill-progress {
+    height: 6px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    border-radius: 3px;
+    transition: width 1.5s ease;
+}
+
+.floating-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.shape {
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    opacity: 0.1;
+    animation: float 20s infinite;
+}
+
+.shape-1 {
+    width: 100px;
+    height: 100px;
+    top: 10%;
+    left: -50px;
+    animation-delay: 0s;
+}
+
+.shape-2 {
+    width: 150px;
+    height: 150px;
+    top: 40%;
+    right: -75px;
+    animation-delay: -5s;
+}
+
+.shape-3 {
+    width: 70px;
+    height: 70px;
+    bottom: 20%;
+    left: 10%;
+    animation-delay: -10s;
+}
+
+.shape-4 {
+    width: 120px;
+    height: 120px;
+    bottom: -60px;
+    right: 20%;
+    animation-delay: -15s;
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(10px, 10px) rotate(5deg);
+    }
+    50% {
+        transform: translate(0, 20px) rotate(-5deg);
+    }
+    75% {
+        transform: translate(-10px, 10px) rotate(5deg);
+    }
+}
+
+/* X (Twitter) Logo Style */
+.social-link.x-link {
+    font-family: Arial, sans-serif;
+    font-weight: 800;
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.social-link.x-link:hover {
+    transform: translateY(-3px);
+    color: var(--primary-color);
+}
+
+/* Project Link Styles */
+.project-link.live-demo {
+    background: linear-gradient(45deg, #00f2fe, #4facfe);
+    color: white;
+    transform: scale(1.1);
+}
+
+.project-link.live-demo:hover {
+    background: linear-gradient(45deg, #4facfe, #00f2fe);
+    box-shadow: 0 0 15px rgba(0, 242, 254, 0.5);
+}
+
+.project-link.live-demo i {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Override cursor styles */
+body, * {
+    cursor: default !important;
+}
+
+/* Hide custom cursor elements */
+.cursor, .cursor-follower {
+    display: none !important;
+}
+
+/* Update project status styles */
+.status-badge.working {
+    display: none;
+}
+
+.project-status .status-badge {
+    background: rgba(40, 167, 69, 0.2) !important;
+    color: #28a745 !important;
+    border: 1px solid rgba(40, 167, 69, 0.3) !important;
+}
+
+.project-status .status-badge i {
+    animation: none !important;
+}
+
+/* Fix animation for project count */
+.stat-number[data-target="2"] {
+    color: #007bff;
+}
