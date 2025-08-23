@@ -214,6 +214,7 @@ html {
     justify-content: center;
     color: var(--text-secondary);
     font-size: 3rem;
+    filter: brightness(1.05) contrast(1.05);
 }
 
 .profile-img:hover {
