@@ -6,6 +6,11 @@
     <meta name="theme-color" content="#0a0a0a">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="description" content="Samson Jose J - CSE-AIML Student Portfolio | AI/ML Projects and Skills">
+    <meta name="keywords" content="AI, ML, Computer Science, Portfolio, Student, Projects">
+    <meta property="og:title" content="Samson Jose J - CSE-AIML Student">
+    <meta property="og:description" content="Portfolio showcasing AI/ML projects and skills">
+    <meta property="og:type" content="website">
     <title>Samson Jose J - CSE-AIML Student</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,8 +19,38 @@
     <link rel="stylesheet" href="css/ai-theme.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/modern-features.css">
 </head>
 <body>
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+
+    <!-- Theme Switcher -->
+    <div class="theme-switch" id="themeSwitch">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <!-- Back to Top -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Navigation Dots -->
+    <div class="nav-dots" id="navDots">
+        <div class="nav-dot" data-section="home"></div>
+        <div class="nav-dot" data-section="about"></div>
+        <div class="nav-dot" data-section="work"></div>
+        <div class="nav-dot" data-section="education"></div>
+        <div class="nav-dot" data-section="contact"></div>
+    </div>
+
     <!-- AI Background Effects -->
     <div class="neural-bg" id="neuralBg"></div>
     <div class="matrix-rain" id="matrixRain"></div>
@@ -545,5 +580,6 @@
 
     <script src="script.js"></script>
     <script src="js/mobile.js"></script>
+    <script src="js/modern-features.js"></script>
 </body>
 </html>
