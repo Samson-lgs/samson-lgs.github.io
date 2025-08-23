@@ -43,49 +43,49 @@
     bottom: 30px;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(26, 26, 26, 0.95);
-    border: 2px solid var(--primary-color);
-    border-radius: 20px;
-    padding: 0.5rem 1.2rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
     font-size: 0.9rem;
-    color: var(--text-primary);
     white-space: nowrap;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 2;
     transition: all 0.3s ease;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .profile-status i {
-    color: #4ecdc4;
+    color: #00ff95;
     font-size: 0.7rem;
     animation: pulse 2s infinite;
+    filter: drop-shadow(0 0 3px rgba(0, 255, 149, 0.5));
 }
 
 .profile-status span {
     white-space: nowrap;
-    font-weight: 500;
-    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+    letter-spacing: 0.02em;
 }
 
 /* Responsive styles */
 @media (max-width: 768px) {
     .profile-status {
-        bottom: 15px;
-        padding: 0.4rem 1rem;
+        bottom: 20px;
         font-size: 0.85rem;
-        background: rgba(26, 26, 26, 0.98);
+    }
+    
+    .profile-status span {
+        font-weight: 700;
     }
 }
 
 /* Hover effect */
 .profile-photo:hover .profile-status {
-    transform: translateX(-50%) translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: translateX(-50%) translateY(-2px);
+}
+
+.profile-photo:hover .profile-status span {
+    color: #fff;
+    text-shadow: 0 0 15px var(--primary-color);
 }
