@@ -480,7 +480,7 @@
                     </div>
                 </div>
 
-                <form class="contact-form" id="contactForm" onsubmit="return handleFormSubmit(event)">
+                <form class="contact-form" id="contactForm" onsubmit="return sendEmail(event)">
                     <div class="form-row">
                         <div class="form-group">
                             <input type="text" name="name" id="name" placeholder="Your Name" required>
@@ -501,52 +501,26 @@
                     </button>
                 </form>
                 <script>
-                    function handleFormSubmit(event) {
+                    function sendEmail(event) {
                         event.preventDefault();
                         
+                        // Get form values
                         const name = document.getElementById('name').value;
                         const email = document.getElementById('email').value;
                         const subject = document.getElementById('subject').value;
                         const message = document.getElementById('message').value;
                         
-                        // Compose email body
+                        // Create email body
                         const emailBody = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
                         
-                        // Try opening in native email app first
-                        const mailtoLink = `mailto:sanjaysamson0522@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+                        // Create mailto URL
+                        const mailtoURL = `mailto:sanjaysamson0522@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
                         
-                        // For mobile devices, create a fallback
-                        if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
-                            // Create a temporary link element
-                            const emailLink = document.createElement('a');
-                            emailLink.href = mailtoLink;
-                            emailLink.style.display = 'none';
-                            document.body.appendChild(emailLink);
-                            
-                            // Trigger click
-                            emailLink.click();
-                            
-                            // Clean up
-                            setTimeout(() => {
-                                document.body.removeChild(emailLink);
-                            }, 100);
-                        } else {
-                            window.location.href = mailtoLink;
-                        }
+                        // Open email client directly
+                        window.open(mailtoURL, '_self');
                         
-                        // Show success message
-                        const button = event.target.querySelector('button');
-                        const originalContent = button.innerHTML;
-                        button.innerHTML = '<span>Message Sent!</span> <i class="fas fa-check"></i>';
-                        button.style.backgroundColor = '#28a745';
-                        
-                        // Reset button after 2 seconds
-                        setTimeout(() => {
-                            button.innerHTML = originalContent;
-                            button.style.backgroundColor = '';
-                            // Reset form
-                            document.getElementById('contactForm').reset();
-                        }, 2000);
+                        // Reset the form
+                        document.getElementById('contactForm').reset();
                         
                         return false;
                     }
