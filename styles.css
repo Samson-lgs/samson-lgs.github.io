@@ -1120,6 +1120,26 @@ html {
     border: 1px solid var(--border-color);
 }
 
+.contact-form button.success {
+    background: #28a745 !important;
+    transform: scale(1.05);
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .contact-form button {
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    
+    .contact-form .form-group input,
+    .contact-form .form-group textarea {
+        font-size: 16px; /* Prevents zoom on mobile */
+        padding: 1rem;
+    }
+}
+
 .form-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
