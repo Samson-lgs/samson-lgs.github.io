@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta chars                    <p class="hero-subtitle">3rd year CSE-AIML student passionate about AI, machine learning, and building intelligent solutions</p>t="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#0a0a0a">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
     <title>Samson Jose J - CSE-AIML Student</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/custom.css">
     <link rel="stylesheet" href="css/ai-theme.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
     <!-- AI Background Effects -->
@@ -475,7 +479,7 @@
                     </div>
                 </div>
 
-                <form class="contact-form" id="contactForm" onsubmit="return sendEmail(event)">
+                <form class="contact-form" id="contactForm" data-netlify="true" name="contact" method="POST">
                     <div class="form-row">
                         <div class="form-group">
                             <input type="text" name="name" id="name" placeholder="Your Name" required>
@@ -533,27 +537,6 @@
     </footer>
 
     <script src="script.js"></script>
-    <script>
-        // Animate skill progress bars when they come into view
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const progressBars = entry.target.querySelectorAll('.progress-bar');
-                    progressBars.forEach(bar => {
-                        const width = bar.style.width;
-                        bar.style.width = '0%';
-                        setTimeout(() => {
-                            bar.style.width = width;
-                        }, 100);
-                    });
-                }
-            });
-        }, { threshold: 0.5 });
-
-        // Observe the skill cards
-        document.querySelectorAll('.skill-card').forEach(card => {
-            observer.observe(card);
-        });
-    </script>
+    <script src="js/mobile.js"></script>
 </body>
 </html>
