@@ -1,6 +1,6 @@
 {
-  "short_name": "Portfolio",
-  "name": "Samson Jose J Portfolio",
+  "short_name": "Samson AI/ML",
+  "name": "Samson Jose J — AI/ML Engineer Portfolio",
   "icons": [
     {
       "src": "favicon.ico",
@@ -10,6 +10,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#08090b",
+  "background_color": "#08090b"
 }
